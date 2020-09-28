@@ -1,25 +1,30 @@
+public class Main{
 
+    public static double Rnd(int min, int max){
+        max -= min;
 
-public class Main {
+        return Math.random() * ++max + min;
+    }
 
     public static void main(String[] args) {
-        int[] d = new int[14];
-        double[] x = new double[15];
-        double[][] d1 = new double[14][15];
+        int n = 14, m = 15;
+        int[] d = new int[n];
+        double[] x = new double[m];
+        double[][] d1 = new double[n][m];
 
         short a = 4;
 
-        for (int i = 0; i < 14; i++){
+        for (int i = 0; i < n; i++){
             d[i] = a;
             a++;
         }
 
-        for (int i = 0; i < 15; i++){
-            x[i] = Math.random() * 11.0 - 6.0;
+        for (int i = 0; i < m; i++){
+            x[i] = Rnd(-6, 5);
         }
 
-        for (int i = 0; i < 14; i++){
-            for (int j = 0; j < 15; j++){
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < m; j++){
                 if(d[i] == 7){
                     d1[i][j] = Math.sin(Math.asin(Math.cos(x[j])));
                 }
@@ -31,6 +36,7 @@ public class Main {
                 }
                 System.out.printf("%.4f ", d1[i][j]);
             }
+            System.out.println();
         }
         System.out.println();
     }
