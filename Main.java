@@ -1,9 +1,8 @@
 public class Main{
 
-    public static double Rnd(int min, int max){
-        max -= min;
-
-        return Math.random() * ++max + min;
+   public static double Rnd(int min, int max){
+        
+        return Math.random() * (max - min) + min;
     }
 
     public static void main(String[] args) {
