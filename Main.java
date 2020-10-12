@@ -1,6 +1,6 @@
 public class Main{
 
-   public static double Rnd(int min, int max){
+   public static double Rnd(double min, double max){
         
         return Math.random() * (max - min) + min;
     }
@@ -19,7 +19,7 @@ public class Main{
         }
 
         for (int i = 0; i < m; i++){
-            x[i] = Rnd(-6, 5);
+            x[i] = Rnd(-6.0, 5.0);
         }
 
         for (int i = 0; i < n; i++){
