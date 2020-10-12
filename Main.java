@@ -6,7 +6,7 @@ public class Main{
     }
 
     public static void main(String[] args) {
-        int n = 14, m = 15;
+        final int n = 14, m = 15;
         int[] d = new int[n];
         double[] x = new double[m];
         double[][] d1 = new double[n][m];
